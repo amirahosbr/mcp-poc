@@ -1,0 +1,25 @@
+{
+    "name": "yaml-workflow-prototype",
+    "version": "1.0.0",
+    "description": "Minimal prototype: AI-generated YAML → TypeScript execution",
+    "main": "dist/cli.js",
+    "type": "module",
+    "scripts": {
+        "build": "tsc",
+        "start": "node dist/cli.js",
+        "dev": "tsx src/cli.ts"
+    },
+    "dependencies": {
+        "commander": "^11.1.0",
+        "dotenv": "^17.2.3",
+        "openai": "^6.3.0",
+        "yaml": "^2.3.4",
+        "zod": "^3.22.4"
+    },
+    "devDependencies": {
+        "@types/node": "^20.19.21",
+        "ts-node": "^10.9.2",
+        "tsx": "^4.6.0",
+        "typescript": "^5.9.3"
+    }
+}

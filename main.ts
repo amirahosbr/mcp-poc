@@ -170,6 +170,7 @@ const generateCharacterMCP = async (
     throw new Error("unexpectedly reached the end of step processing");
   })();
 
+  // don't have to be `let` -> just use const
   let initialCtx: WorkflowContext = {
     input,
   };
@@ -444,7 +445,7 @@ const exampleInput3: Workflow = {
     "A kawaii angry cat girl elf warrior character with a sword and shield in a forest background studio ghibli style",
   images: [
     {
-      base64: fs.readFileSync("cat.jpg", "base64"),
+      base64: fs.readFileSync("squirrel.jpg", "base64"),
     },
   ],
   steps: [
@@ -476,5 +477,9 @@ const exampleInput4: Workflow = {
     },
   ],
 };
+
+// -------------------------------
+// CHANGE DIFFERENT INPUT (1,2,3,4)
+// -------------------------------
 
 generateCharacterMCP(exampleInput4);
